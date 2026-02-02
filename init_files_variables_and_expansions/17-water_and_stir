@@ -1,0 +1,6 @@
+#!/bin/bash
+w=$(echo "$WATER" | tr 'ewatr' '01234')
+s=$(echo "$STIR" | tr 'ti' '01')
+sum=$(echo "obase=8; ibase=5; $w + $(echo "ibase=2; $s" | bc)" | bc)
+echo "$sum" | tr '01234567' 'bestchol'
+
