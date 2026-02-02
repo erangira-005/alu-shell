@@ -1,2 +1,2 @@
 #!/bin/bash
-filename=$'\\*\\\\\'"Best School"\'\\\\*$\\?\\*\\*\\*\\*\\*:)'  # exact 39-char name echo "Best School" > "$filename"
+echo "Best School" > $'\\*\\\\\'"Best School"\'\\\\*$\\?\\*\\*\\*\\*\\*:)'
