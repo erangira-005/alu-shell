@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script counts occurrences of IP + HTTP code from Apache log and sorts by frequency
+
+awk '{count[$1" "$9]++} END {for (ipcode in count) print count[ipcode], ipcode}' apache-access.log | sort -nr
