@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
-# This script counts occurrences of IP + HTTP code from Apache log and sorts by frequency
+# Script: 14-dig_the-data
+# Counts occurrences of IP + HTTP code and sorts them from highest to lowest
 
+# Ensure the Apache log file exists
+if [ ! -f "apache-access.log" ]; then
+    echo "apache-access.log not found" >&2
+    exit 1
+fi
+
+# Parse, count, and sort
 awk '{count[$1" "$9]++} END {for (ipcode in count) printf "%d %s\n", count[ipcode], ipcode}' apache-access.log | sort -nr
 
