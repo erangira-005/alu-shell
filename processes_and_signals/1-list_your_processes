@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-# 1-list_your_processes
-
-# Show all processes, for all users, in user-oriented format
-# Only UID and full command
-ps -eo uid,args
+# This script displays all running processes in a tree format
+ps auxf
