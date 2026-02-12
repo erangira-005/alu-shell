@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # 1-list_your_processes
 
-# List all processes in a user-oriented format, including those without a TTY, showing hierarchy
-ps -e -f --forest
+# Show all processes for all users, in a user-oriented format, with process hierarchy
+ps -ef --forest
+
